@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6c63ff">
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@300;400;700" />
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="app-title">Progressive Web App</h1>
+        <p class="app-sub">Progressive Web App modern dan interaktif</p>
+
+        <div class="card">
+
+            <h2 class="welcome">Welcome</h2>
+            <p class="desc">
+                Aplikasi ini mendukung offline mode, bisa di-install, dan memiliki fitur notifikasi lucu.
+            </p>
+
+            <a href="about.html" class="btn-about">Tentang Aplikasi</a>
+
+            <button id="notifyBtn" class="bell-wrapper">
+                <span class="material-symbols-rounded bell-icon">notifications</span>
+            </button>
+
+            <p id="notifStatus" class="notif-status"></p>
+
+        </div>
+
+        <footer class="footer">© 2025 My PWA App</footer>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

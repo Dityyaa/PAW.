@@ -1,0 +1,174 @@
+/* 🌌 FUTURISTIC TECH BACKGROUND */
+body,
+.about-page {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at center, #2a145a, #0b0620 70%);
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Garis circuit glowing */
+body::before,
+.about-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(90deg, rgba(180,120,255,0.08) 1px, transparent 1px),
+        linear-gradient(rgba(180,120,255,0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: circuitMove 22s linear infinite;
+    z-index: -1;
+}
+
+/* Titik neon */
+body::after,
+.about-page::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,140,255,.25) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: glowDots 7s infinite alternate;
+    z-index: -1;
+}
+
+/* ANIMASI BACKGROUND */
+@keyframes circuitMove {
+    from { background-position: 0 0; }
+    to { background-position: 200px 200px; }
+}
+
+@keyframes glowDots {
+    from { opacity: .15; }
+    to { opacity: .5; }
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    padding: 20px;
+}
+
+.app-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #00eaff;
+    margin-bottom: 3px;
+}
+
+.app-sub {
+    font-size: 15px;
+    margin-bottom: 22px;
+    color: #b8f7ff;
+}
+
+/* CARD GLASS EFFECT */
+.card,
+.about-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 35px 28px;
+    border: 1px solid rgba(180,120,255,.35);
+    box-shadow: 0 0 30px rgba(180,120,255,.3);
+}
+
+.card h2,
+.about-card h1 {
+    color: #d6b4ff;
+    margin-top: 0;
+}
+
+.desc,
+.about-card p {
+    color: #f2eaff;
+}
+
+/* BUTTON ABOUT */
+.btn-about,
+.btn-back {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 10px;
+    font-weight: 600;
+    background: #00d1ff;
+    color: #002e3b;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.btn-about:hover,
+.btn-back:hover {
+    background: #00f0ff;
+    transform: scale(1.08);
+}
+
+/* 🔔 BELL BUTTON */
+.bell-wrapper {
+    margin-top: 25px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #1df2f2;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0,255,255,.5);
+    animation: bellWiggle 1.7s infinite ease-in-out;
+}
+
+.bell-icon {
+    font-size: 40px;
+    color: #004a4a;
+    line-height: 75px;
+}
+
+/* Wiggle animation */
+@keyframes bellWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    40% { transform: rotate(10deg); }
+    60% { transform: rotate(-10deg); }
+}
+
+.bell-wrapper:active {
+    transform: scale(.9);
+}
+
+/* STATUS TEXT */
+.notif-status {
+    margin-top: 18px;
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* ABOUT PAGE POSITIONING */
+.about-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    animation: fadeUp .6s ease;
+}
+
+/* Fade Animation */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+.footer {
+    color: #7aefff;
+    font-size: 14px;
+    margin-top: 25px;
+}
